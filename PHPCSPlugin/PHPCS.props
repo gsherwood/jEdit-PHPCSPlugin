@@ -1,7 +1,7 @@
 plugin.phpcs.PHPCSPlugin.activate=defer
 plugin.phpcs.PHPCSPlugin.name=PHP_CodeSniffer
 plugin.phpcs.PHPCSPlugin.author=Squiz Pty Ltd. (http://www.squiz.net)
-plugin.phpcs.PHPCSPlugin.description=This plugin runs PHP_CodeSniffer on your open buffers. It requires a local install PHP_CodeSniffer.
+plugin.phpcs.PHPCSPlugin.description=This plugin runs PHP_CodeSniffer on your open buffers. It requires a local install of PHP_CodeSniffer.
 plugin.phpcs.PHPCSPlugin.version=1.2.0
 
 # dependencies
