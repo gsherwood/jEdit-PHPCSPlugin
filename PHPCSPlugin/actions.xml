@@ -1,0 +1,15 @@
+<!DOCTYPE ACTIONS SYSTEM "actions.dtd">
+
+<ACTIONS>
+	<ACTION NAME="chkBuffer">
+		<CODE>
+			phpcs.PHPCSPlugin.checkBuffer(view);
+		</CODE>
+	</ACTION>
+
+	<ACTION NAME="chkAllBuffers">
+		<CODE>
+			phpcs.PHPCSPlugin.checkBuffers(view);
+		</CODE>
+	</ACTION>
+</ACTIONS>

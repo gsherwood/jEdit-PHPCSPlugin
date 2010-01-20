@@ -1,0 +1,23 @@
+plugin.phpcs.PHPCSPlugin.activate=defer
+plugin.phpcs.PHPCSPlugin.name=PHP_CodeSniffer
+plugin.phpcs.PHPCSPlugin.author=Squiz Pty Ltd. (http://www.squiz.net)
+plugin.phpcs.PHPCSPlugin.description=This plugin runs PHP_CodeSniffer on your open buffers. It requires a local install PHP_CodeSniffer.
+plugin.phpcs.PHPCSPlugin.version=1.2.0
+
+# dependencies
+plugin.phpcs.PHPCSPlugin.depend.0=jdk 1.4
+plugin.phpcs.PHPCSPlugin.depend.1=jedit 04.02.01.00
+plugin.phpcs.PHPCSPlugin.depend.2=plugin errorlist.ErrorListPlugin 1.7
+
+# menu
+plugin.phpcs.PHPCSPlugin.menu=chkBuffer chkAllBuffers
+plugin.phpcs.PHPCSPlugin.menu.label=PHP_CodeSniffer
+chkBuffer.label=Check Current Buffer
+chkAllBuffers.label=Check All Buffers
+
+# option pane
+plugin.phpcs.PHPCSPlugin.option-pane=phpcs
+options.phpcs.label=PHP_CodeSniffer
+options.phpcs.code=new phpcs.PHPCSOptionPane();
+options.phpcs.path=phpcs
+options.phpcs.standard=PEAR

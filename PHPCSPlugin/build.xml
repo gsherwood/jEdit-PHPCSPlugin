@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+
+<project name="PHPCSPlugin" default="dist" basedir=".">
+	<property name="jar.name" value="PHPCSPlugin.jar"/>
+	<property name="src.dir" value="."/>
+	<property name="build.dir" value="classes"/>
+	<property name="lib.dir" value="lib"/>
+	<property name="install.dir" value="/Users/gsherwood/.jedit/jars"/>
+	
+	<property name="jedit.install.dir" value="/Applications/jEdit.app/Contents/Resources/Java"/>
+
+	<path id="project.class.path">
+		<pathelement location="${jedit.install.dir}/jedit.jar"/>
+		<pathelement location="${install.dir}/ErrorList.jar"/>
+	</path>
+	
+	<target name="init">
+		<mkdir dir="${build.dir}"/>
+	</target>
+	
+	<target name="compile" depends="init">
+		<javac classpathref="project.class.path" description="on" destdir="${build.dir}" srcdir="${src.dir}">
+		</javac>
+	</target>
+	
+	<target name="dist" depends="compile">
+		<jar jarfile="${install.dir}/${jar.name}">
+			<fileset dir="${build.dir}"/>
+			<fileset dir="${src.dir}">
+				<include name="actions.xml"/>
+				<include name="*.props"/>
+			</fileset>
+		</jar>
+	</target>
+	
+	<target name="clean">
+		<delete dir="${build.dir}"/>
+		<delete>
+			<fileset defaultexcludes="false" dir="${basedir}">
+				<include name="**/*~"/>
+			</fileset>
+		</delete>
+	</target>
+</project>
